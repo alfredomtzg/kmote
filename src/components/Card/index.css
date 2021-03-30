@@ -1,0 +1,13 @@
+.cardItem {
+  display: grid;
+  grid-template-columns: 50px 1fr ;
+  width: 245px;
+  background-color: antiquewhite;
+  border-radius: 10px;
+  border: 1px solid antiquewhite;
+}
+img {
+  border-radius: 50px;
+  align-self: center;
+  grid-row: 1 / span 2;
+}
