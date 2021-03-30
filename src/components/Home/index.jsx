@@ -36,10 +36,7 @@ export default function Home() {
     var API = "https://kmote.mx/devtest/";
     fetch(API)
       .then((response) => response.json())
-      .then((data) => {
-        setCandidates([...candidates, ...data?.data]);
-        console.log(data?.data);
-      });
+      .then((data) => setCandidates([...candidates, ...data?.data]));
   };
 
   useEffect(() => {
@@ -65,7 +62,11 @@ export default function Home() {
         })}
       </main>
       <section className="actionButton">
-        <Button onClick={()=> bringData()} variant="contained" color="secondary">
+        <Button
+          onClick={() => bringData()}
+          variant="contained"
+          color="secondary"
+        >
           Ver mas
         </Button>
       </section>
