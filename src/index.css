@@ -2,6 +2,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f5f7fd;
+  min-height: 100vh;
+  background-image: repeating-linear-gradient(to top left,rgb(79, 192, 122) 0%,rgb(21, 51, 187) 100%);
 }
 

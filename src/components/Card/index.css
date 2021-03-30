@@ -1,13 +1,27 @@
 .cardItem {
   display: grid;
-  grid-template-columns: 50px 1fr ;
+  grid-template-columns: 70px 1fr ;
   width: 245px;
-  background-color: antiquewhite;
+  background-color: #e0e1f1f5;
   border-radius: 10px;
-  border: 1px solid antiquewhite;
+
+  border: 1px solid #e0e1f1f5;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+h1, h2, h3 {
+  color: #3a4b68;
+}
+h4,h5 {
+  color: #54575f;
 }
 img {
+  margin: 10px;
   border-radius: 50px;
   align-self: center;
   grid-row: 1 / span 2;
+}
+.circuleRed {
+  width: 10px;
+  border-radius: 50px;
+  background-color: red;
 }

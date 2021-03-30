@@ -1,9 +1,19 @@
 header {
   display: flex;
-  justify-content: space-around;
   width: 95%;
   margin: 1rem;
+  justify-content: space-around;
 }
 img {
   width: 50px;
+}
+main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 2rem;
+}
+.actionButton {
+  display: flex;
+  margin-top: 2rem;
+  justify-content: center;
 }

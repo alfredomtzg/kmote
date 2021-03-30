@@ -9,6 +9,7 @@ import { makeStyles } from "@material-ui/core/styles";
 // Context
 import { Context } from "../../utils/Context";
 import Card from "../Card";
+import { Button } from "@material-ui/core";
 // import {useStyles} from '../../material'
 
 export const useStyles = makeStyles((theme) => ({
@@ -29,7 +30,7 @@ export default function Home() {
   };
 
   const filterCandidates = candidates.filter((candidate) => {
-    return candidate.nombre.includes(search.toLowerCase().toUpperCase());
+    return candidate.nombre.toUpperCase().includes(search.toUpperCase());
   });
 
   const bringData = () => {
@@ -41,6 +42,9 @@ export default function Home() {
         console.log(data?.data);
       });
   };
+  const moreData = () => {
+    
+  }
   useEffect(() => {
     bringData();
   }, []);
@@ -50,7 +54,7 @@ export default function Home() {
         <img src={logo} alt="Logo Kmote" />
         <form className={classes.root}>
           <TextField
-            autoFocus
+            color="secondary"
             value={search}
             onChange={handleChange}
             label="Buscar"
@@ -62,8 +66,12 @@ export default function Home() {
         {filterCandidates.map((candidate) => {
           return <Card key={candidate?.nombre} {...candidate} />;
         })}
-        <button> ver mas</button>
       </main>
+      <section className="actionButton">
+        <Button onClick={()=> moreData()} variant="contained" color="secondary">
+          Ver mas
+        </Button>
+      </section>
     </>
   );
 }
