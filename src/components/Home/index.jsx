@@ -16,7 +16,6 @@ export const useStyles = makeStyles((theme) => ({
   root: {
     "& > *": {
       margin: theme.spacing(1),
-      width: "65ch",
     },
   },
 }));
@@ -38,13 +37,11 @@ export default function Home() {
     fetch(API)
       .then((response) => response.json())
       .then((data) => {
-        setCandidates(data?.data);
+        setCandidates([...candidates, ...data?.data]);
         console.log(data?.data);
       });
   };
-  const moreData = () => {
-    
-  }
+
   useEffect(() => {
     bringData();
   }, []);
@@ -63,12 +60,12 @@ export default function Home() {
         </form>
       </header>
       <main>
-        {filterCandidates.map((candidate) => {
-          return <Card key={candidate?.nombre} {...candidate} />;
+        {filterCandidates.map((candidate, index) => {
+          return <Card key={index} {...candidate} />;
         })}
       </main>
       <section className="actionButton">
-        <Button onClick={()=> moreData()} variant="contained" color="secondary">
+        <Button onClick={()=> bringData()} variant="contained" color="secondary">
           Ver mas
         </Button>
       </section>

@@ -1,7 +1,7 @@
 .cardItem {
   display: grid;
   grid-template-columns: 70px 1fr ;
-  width: 245px;
+  width: 100%;
   background-color: #e0e1f1f5;
   border-radius: 10px;
 
@@ -21,7 +21,7 @@ img {
   grid-row: 1 / span 2;
 }
 .circuleRed {
-  width: 10px;
+  width: 2rem;
   border-radius: 50px;
   background-color: red;
 }

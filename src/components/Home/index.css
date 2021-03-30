@@ -1,7 +1,7 @@
 header {
   display: flex;
   width: 95%;
-  margin: 1rem;
+  padding: 1rem;
   justify-content: space-around;
 }
 img {
@@ -9,11 +9,31 @@ img {
 }
 main {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  padding: 2rem;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  
 }
 .actionButton {
   display: flex;
   margin-top: 2rem;
+  margin-bottom: 2rem;
   justify-content: center;
+}
+@media only screen and (max-width: 900px) {
+  header {
+    display: block;
+    padding: 2rem;
+  }
+  main {
+    grid-template-columns:  1fr 1fr 1fr;
+  }
+}
+@media only screen and (max-width: 600px) {
+  header {
+    display: block;
+    padding: 2rem;
+  }
+  main {
+    grid-template-columns:  1fr;
+  }
 }
